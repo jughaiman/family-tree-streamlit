@@ -21,8 +21,8 @@ import json
 
 
 # قراءة بيانات json من Streamlit secrets
-json_str = st.secrets["gcp_service_account"]
-info = json.loads(json_str)
+info = st.secrets["gcp_service_account"]
+
 creds = Credentials.from_service_account_info(info, scopes=SCOPE)
 
 
